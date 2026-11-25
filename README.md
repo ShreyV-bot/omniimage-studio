@@ -4,11 +4,11 @@
 Think of the node graphs of Blender/Resolve/Nuke as a plain Python library and CLI that you can script, test, and extend.
 
 <p align="center">
-  <a href="https://github.com/YOUR_USERNAME/omniimage-studio/releases/latest"><img alt="Download the latest release" src="https://img.shields.io/badge/Download-latest%20release-2ea44f?style=for-the-badge&logo=github"></a>
-  <a href="https://github.com/YOUR_USERNAME/omniimage-studio/archive/refs/heads/main.zip"><img alt="Download the source as a ZIP" src="https://img.shields.io/badge/Download-source%20ZIP-1f6feb?style=for-the-badge&logo=github"></a>
+  <a href="https://github.com/ShreyV-bot/omniimage-studio/releases/latest"><img alt="Download the latest release" src="https://img.shields.io/badge/Download-latest%20release-2ea44f?style=for-the-badge&logo=github"></a>
+  <a href="https://github.com/ShreyV-bot/omniimage-studio/archive/refs/heads/main.zip"><img alt="Download the source as a ZIP" src="https://img.shields.io/badge/Download-source%20ZIP-1f6feb?style=for-the-badge&logo=github"></a>
 </p>
 <p align="center">
-  <a href="https://github.com/YOUR_USERNAME/omniimage-studio/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/YOUR_USERNAME/omniimage-studio/actions/workflows/ci.yml/badge.svg"></a>
+  <a href="https://github.com/ShreyV-bot/omniimage-studio/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/ShreyV-bot/omniimage-studio/actions/workflows/ci.yml/badge.svg"></a>
   <img alt="License: Apache-2.0" src="https://img.shields.io/badge/license-Apache--2.0-blue">
   <img alt="Python 3.10+" src="https://img.shields.io/badge/python-3.10%2B-blue">
 </p>
@@ -16,7 +16,7 @@ Think of the node graphs of Blender/Resolve/Nuke as a plain Python library and C
 **Get started in two commands** (Python 3.10+; install [ffmpeg](https://ffmpeg.org/download.html) for video and most audio formats):
 
 ```bash
-pip install https://github.com/YOUR_USERNAME/omniimage-studio/archive/refs/heads/main.zip
+pip install https://github.com/ShreyV-bot/omniimage-studio/archive/refs/heads/main.zip
 omni gui        # opens the node editor and timeline at http://127.0.0.1:8765
 ```
 
