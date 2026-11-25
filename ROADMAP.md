@@ -29,4 +29,4 @@ The 1,503-feature blueprint (`docs/Media_Studio_Feature_Blueprint.docx`) is the 
 - [ ] GPU backend (wgpu/Vulkan) behind the same node API
 - [ ] Scripting console, plugin marketplace
 
-See [docs/MASTER_PLAN.md](docs/MASTER_PLAN.md) for the full multi-phase plan toward Blender / Resolve / Maya / Figma scope.
+See [docs/MASTER_PLAN.md](docs/MASTER_PLAN.md) for the full multi-phase plan.
