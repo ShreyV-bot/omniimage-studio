@@ -1,0 +1,36 @@
+name: Release
+# Push a tag like v0.8.0 and this builds the downloadable files and publishes them on the Releases page,
+# which is what the "Download" button in the README points to.
+on:
+  push:
+    tags: ["v[0-9]+.[0-9]+.[0-9]+"]
+
+permissions:
+  contents: read
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write          # only this job may create the release
+    env:
+      TAG: ${{ github.ref_name }}
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - name: The tag must match the package version
+        run: |
+          version=$(python -c "import tomllib,sys;print(tomllib.load(open('pyproject.toml','rb'))['project']['version'])")
+          test "v$version" = "$TAG" || { echo "tag $TAG does not match pyproject version $version"; exit 1; }
+      - run: sudo apt-get update && sudo apt-get install -y ffmpeg
+      - run: pip install -e ".[dev]" build
+      - run: pytest -q
+      - name: Build the files people download
+        run: |
+          python -m build                                           # wheel + source distribution in dist/
+          git archive --format=zip --prefix="omniimage-studio-${TAG}/" -o "dist/omniimage-studio-${TAG}.zip" HEAD
+          ls -l dist
+      - name: Publish the release
+        run: gh release create "$TAG" dist/* --title "OmniImage Studio $TAG" --generate-notes
